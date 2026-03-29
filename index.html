@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>敬語マスター</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --surface: #191919;
+    --border: #2a2a2a;
+    --text: #e8e4dc;
+    --muted: #666;
+    --accent: #c8a96e;
+    --blue: #4a9eff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(32px, 8vw, 52px);
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 56px;
+    letter-spacing: 1px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  @media (max-width: 480px) {
+    .cards { grid-template-columns: 1fr; }
+  }
+
+  a.card {
+    display: block;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 32px 28px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  a.card::after {
+    content: '→';
+    position: absolute;
+    bottom: 20px;
+    right: 24px;
+    font-size: 18px;
+    color: var(--border);
+    transition: color 0.2s, right 0.2s;
+  }
+
+  a.card:hover {
+    border-color: var(--accent);
+    background: #1e1e1e;
+  }
+
+  a.card:hover::after {
+    color: var(--accent);
+    right: 20px;
+  }
+
+  .card-num {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .card-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .card-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 20px;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 3px 8px;
+    background: rgba(200,169,110,0.1);
+    color: var(--accent);
+    letter-spacing: 0.5px;
+  }
+
+  footer {
+    margin-top: 48px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="eyebrow">KEIGO MASTER</div>
+<h1>敬語マスター</h1>
+<p class="subtitle">声に出して、使えるようになる</p>
+
+<div class="cards">
+  <a href="keigo_reference.html" class="card">
+    <div class="card-num">01</div>
+    <div class="card-title">敬語<br>リファレンス</div>
+    <div class="card-desc">動詞・名詞・定型フレーズ・NG表現・二重敬語を網羅した総合辞典</div>
+    <div class="card-tags">
+      <span class="tag">動詞26語</span>
+      <span class="tag">定型フレーズ</span>
+      <span class="tag">NG表現</span>
+      <span class="tag">二重敬語</span>
+    </div>
+  </a>
+
+  <a href="keigo_examples.html" class="card">
+    <div class="card-num">02</div>
+    <div class="card-title">例文集<br>声に出す</div>
+    <div class="card-desc">シチュエーション付き例文。青いハイライトを声に出して3回読む</div>
+    <div class="card-tags">
+      <span class="tag">例文つき</span>
+      <span class="tag">場面別</span>
+      <span class="tag">練習用</span>
+    </div>
+  </a>
+</div>
+
+<footer>毎日少しずつ · 口が覚えるまで繰り返す</footer>
+
+</body>
+</html>

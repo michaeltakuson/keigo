@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>敬語例文集｜声に出して練習する</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --surface: #191919;
+    --border: #2a2a2a;
+    --text: #e8e4dc;
+    --muted: #666;
+    --self: #4a9eff;
+    --other: #888;
+    --tag-self: rgba(74,158,255,0.12);
+    --tag-other: rgba(136,136,136,0.1);
+    --accent: #c8a96e;
+    --red: #e05555;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  header {
+    padding: 52px 40px 40px;
+    border-bottom: 1px solid var(--border);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .header-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .header-note {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .legend {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .dot-self { background: var(--self); }
+  .dot-other { background: var(--other); }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(15,15,15,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 0 40px;
+  }
+  .nav-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    gap: 0;
+    scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    padding: 13px 14px;
+    white-space: nowrap;
+    border-bottom: 1px solid transparent;
+    transition: all 0.15s;
+    font-weight: 400;
+  }
+  nav a:hover {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+
+  /* MAIN */
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 40px 80px;
+  }
+
+  /* SECTION */
+  section { margin-bottom: 64px; }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .section-num {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--text);
+  }
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* CARD */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    margin-bottom: 3px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 14px 18px 10px;
+  }
+
+  .verb {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    min-width: 56px;
+  }
+
+  .type-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    border-radius: 1px;
+  }
+  .badge-self {
+    background: var(--tag-self);
+    color: var(--self);
+  }
+  .badge-other {
+    background: var(--tag-other);
+    color: var(--other);
+  }
+  .badge-teinei {
+    background: rgba(200,169,110,0.1);
+    color: var(--accent);
+  }
+
+  .keigo-form {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    margin-left: auto;
+  }
+
+  .examples {
+    padding: 0 18px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .example {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .example-scene {
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 2px;
+    min-width: 90px;
+  }
+
+  .example-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #c8c4bc;
+  }
+
+  .example-text .highlight {
+    color: var(--self);
+    font-weight: 500;
+  }
+  .example-text .highlight-other {
+    color: var(--other);
+    font-weight: 500;
+  }
+
+  /* PHRASE CARD */
+  .phrase-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    margin-bottom: 3px;
+    padding: 14px 18px;
+  }
+
+  .phrase-head {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+
+  .phrase-label {
+    font-size: 12px;
+    color: var(--muted);
+    min-width: 80px;
+  }
+
+  .phrase-ok {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--self);
+  }
+
+  .phrase-ng {
+    font-size: 12px;
+    color: var(--red);
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+
+  .phrase-example {
+    font-size: 13.5px;
+    color: #c8c4bc;
+    line-height: 1.7;
+    padding-left: 90px;
+  }
+
+  .phrase-example .hl { color: var(--self); font-weight: 500; }
+
+  /* WORD CARD */
+  .word-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+  }
+  @media (max-width: 500px) { .word-grid { grid-template-columns: 1fr; } }
+
+  .word-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+  }
+  .word-from {
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: line-through;
+    margin-bottom: 3px;
+  }
+  .word-to {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .word-example {
+    font-size: 12.5px;
+    color: #a0a0a0;
+    line-height: 1.6;
+  }
+  .word-example .hl { color: var(--accent); font-weight: 500; }
+
+  /* CUSHION */
+  .cushion-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 14px 18px;
+    margin-bottom: 3px;
+  }
+  .cushion-word {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .cushion-scene {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .cushion-ex {
+    font-size: 13.5px;
+    color: #c8c4bc;
+    line-height: 1.7;
+  }
+  .cushion-ex .hl { color: var(--accent); font-weight: 500; }
+
+  html { scroll-behavior: smooth; }
+
+  .subsection {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    font-weight: 700;
+    margin: 28px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 40px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-eyebrow">KEIGO TRAINING · 例文集</div>
+  <h1>声に出して覚える敬語</h1>
+  <p class="header-note">
+    青色ハイライト＝自分が使う言葉（謙譲語・丁寧語）。灰色＝相手の言葉（尊敬語・認識用）。<br>
+    各例文を声に出して3回読む。それだけでいい。
+  </p>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot dot-self"></div>自分が使う（謙譲語）</div>
+    <div class="legend-item"><div class="legend-dot dot-other"></div>相手が使う（尊敬語・認識用）</div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#verbs">動詞</a>
+    <a href="#phrases">定型フレーズ</a>
+    <a href="#cushion">クッション言葉</a>
+    <a href="#words">語彙言い換え</a>
+    <a href="#nouns">名詞・呼称</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ======= 動詞 ======= -->
+<section id="verbs">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h2>動詞</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- 言う -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">言う</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">申す・申し上げる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">自己紹介</span>
+        <span class="example-text">○○大学の田中と<span class="highlight">申します</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">OB訪問依頼</span>
+        <span class="example-text">お礼を<span class="highlight">申し上げたく</span>、ご連絡いたしました。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">言う</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">おっしゃる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">面接</span>
+        <span class="example-text">先ほど面接官が<span class="highlight-other">おっしゃった</span>内容について質問してもよろしいですか。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 聞く -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">聞く</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">伺う・拝聴する・承る</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">OB訪問</span>
+        <span class="example-text">本日はお話を<span class="highlight">伺えて</span>大変勉強になりました。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">電話</span>
+        <span class="example-text">ご用件を<span class="highlight">承ります</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">セミナー後</span>
+        <span class="example-text">貴重なお話を<span class="highlight">拝聴し</span>、ありがとうございました。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">聞く</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">お聞きになる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">確認</span>
+        <span class="example-text">その件はもうお聞きになりましたか。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 見る -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">見る</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">拝見する</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">面接・書類</span>
+        <span class="example-text">御社のホームページを<span class="highlight">拝見し</span>、志望いたしました。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">資料を渡された時</span>
+        <span class="example-text">ありがとうございます。後ほど<span class="highlight">拝見します</span>。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">見る</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">ご覧になる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">資料を渡す時</span>
+        <span class="example-text">こちらの資料をご覧になってください。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 見せる -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">見せる</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">お目にかける・ご覧に入れる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">資料を見せる</span>
+        <span class="example-text">作成した資料を<span class="highlight">お目にかけたい</span>のですが、よろしいでしょうか。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 話す -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">話す</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">申し上げる・お話しする</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">面接・説明</span>
+        <span class="example-text">私の経験について<span class="highlight">お話しします</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">重要な伝達</span>
+        <span class="example-text">一点<span class="highlight">申し上げたい</span>ことがございます。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 行く -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">行く</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">伺う・参る</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">訪問の連絡</span>
+        <span class="example-text">来週の月曜日に<span class="highlight">伺います</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">面接会場へ</span>
+        <span class="example-text">10時に御社へ<span class="highlight">参ります</span>。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">行く</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">いらっしゃる・おいでになる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">確認</span>
+        <span class="example-text">明日はいらっしゃいますか。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 来る -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">来る</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">参る</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">受付で</span>
+        <span class="example-text">本日は面接のため<span class="highlight">参りました</span>、田中と申します。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">来る</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">いらっしゃる・お越しになる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">電話・来訪確認</span>
+        <span class="example-text">○○様がお越しになりました。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 帰る -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">帰る</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">おいとまする・失礼する</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">OB訪問の終わり</span>
+        <span class="example-text">そろそろ<span class="highlight">失礼いたします</span>。本日はありがとうございました。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">帰る</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">お帰りになる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">不在確認</span>
+        <span class="example-text">山田はすでにお帰りになりました。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- いる -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">いる</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">おる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">電話・伝言</span>
+        <span class="example-text">担当の田中は只今席を外して<span class="highlight">おります</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">状況説明</span>
+        <span class="example-text">現在インターンシップに参加して<span class="highlight">おります</span>。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">いる</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">いらっしゃる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">電話</span>
+        <span class="example-text">○○様はいらっしゃいますか。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- する -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">する</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">いたす</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">連絡・依頼</span>
+        <span class="example-text">改めてご連絡<span class="highlight">いたします</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">面接・自己PR</span>
+        <span class="example-text">精一杯努力<span class="highlight">いたします</span>。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">する</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">なさる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">確認</span>
+        <span class="example-text">どのようにお考えになってなさいますか。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 知る -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">知る</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">存じる・存じ上げる・承知する</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">面接・知っている</span>
+        <span class="example-text">はい、<span class="highlight">存じております</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">面接・知らない</span>
+        <span class="example-text">その点については<span class="highlight">存じ上げません</span>でした。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">了解した</span>
+        <span class="example-text"><span class="highlight">承知いたしました</span>。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">知る</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">ご存じ</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">確認</span>
+        <span class="example-text">この件はもうご存じですか。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 読む -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">読む</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">拝読する</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">メール・書類受け取り</span>
+        <span class="example-text">ご送付いただいたメールを<span class="highlight">拝読いたしました</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">書籍・記事</span>
+        <span class="example-text">御社の代表のインタビューを<span class="highlight">拝読し</span>、感銘を受けました。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 食べる・飲む -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">食べる・飲む</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">いただく・頂戴する</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">お茶を出された時</span>
+        <span class="example-text">ありがとうございます、<span class="highlight">いただきます</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">名刺を受け取る</span>
+        <span class="example-text">お名刺を<span class="highlight">頂戴いたします</span>。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">食べる</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">召し上がる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">勧める時</span>
+        <span class="example-text">どうぞ召し上がってください。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- もらう -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">もらう</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">いただく・頂戴する・賜る</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">OB訪問のお礼</span>
+        <span class="example-text">貴重なお時間を<span class="highlight">いただき</span>、誠にありがとうございました。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">機会への感謝</span>
+        <span class="example-text">このような機会を<span class="highlight">賜り</span>、光栄でございます。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 会う -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">会う</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">お目にかかる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">初対面の挨拶</span>
+        <span class="example-text"><span class="highlight">お目にかかれて</span>光栄です。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">OB訪問依頼</span>
+        <span class="example-text">一度<span class="highlight">お目にかかり</span>、お話を伺えますでしょうか。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 待つ -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">待つ</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">お待ちする</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">電話・折り返し</span>
+        <span class="example-text">ご連絡を<span class="highlight">お待ちしております</span>。</span>
+      </div>
+    </div>
+    <div class="card-header" style="padding-top:0">
+      <span class="verb" style="opacity:0">待つ</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">お待ちくださる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">受付・案内</span>
+        <span class="example-text">少々お待ちくださいませ。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 思う -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">思う</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">存じる・拝察する</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">面接・意見</span>
+        <span class="example-text">私はそのように<span class="highlight">存じます</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">相手への配慮</span>
+        <span class="example-text">お忙しいことと<span class="highlight">拝察いたします</span>。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 考える -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">考える</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">検討いたします・拝察する</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">提案を受けた時</span>
+        <span class="example-text">ご提案の件、<span class="highlight">検討いたします</span>。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 訪問する -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">訪問する</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">伺う・お訪ねする</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">OB訪問依頼</span>
+        <span class="example-text">来週<span class="highlight">お訪ねしてもよろしいでしょうか</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">アポ確認</span>
+        <span class="example-text">木曜日の14時に<span class="highlight">伺う</span>予定でございます。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 伝える -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">伝える</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">申し伝える</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">電話・伝言</span>
+        <span class="example-text">田中に<span class="highlight">申し伝えます</span>。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 与える -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">与える・あげる</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">差し上げる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">資料を渡す</span>
+        <span class="example-text">こちらの資料を<span class="highlight">差し上げます</span>。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 受け取る -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">受け取る</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">頂戴する・拝受する・賜る</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">名刺・書類</span>
+        <span class="example-text">お名刺を<span class="highlight">頂戴いたします</span>。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">メールの受領確認</span>
+        <span class="example-text">メールを<span class="highlight">拝受いたしました</span>。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 座る -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">座る</span>
+      <span class="type-badge badge-other">尊敬（認識）</span>
+      <span class="keigo-form" style="color:var(--other)">お掛けになる</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">案内</span>
+        <span class="example-text">こちらにお掛けください。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 使う -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">使う</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">使わせていただく</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">許可を得て使う</span>
+        <span class="example-text">会議室を<span class="highlight">使わせていただいてもよろしいでしょうか</span>。</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- わかる -->
+  <div class="card">
+    <div class="card-header">
+      <span class="verb">わかる</span>
+      <span class="type-badge badge-self">謙譲</span>
+      <span class="keigo-form">かしこまる・承知する</span>
+    </div>
+    <div class="examples">
+      <div class="example">
+        <span class="example-scene">指示を受けた時</span>
+        <span class="example-text"><span class="highlight">かしこまりました</span>。すぐに対応いたします。</span>
+      </div>
+      <div class="example">
+        <span class="example-scene">依頼を受けた時</span>
+        <span class="example-text"><span class="highlight">承知いたしました</span>。</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ======= 定型フレーズ ======= -->
+<section id="phrases">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h2>定型フレーズ</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">承諾・了解</span>
+      <span class="phrase-ok">承知いたしました・かしこまりました</span>
+      <span class="phrase-ng">了解しました</span>
+    </div>
+    <div class="phrase-example">面接官「14時に来てください」→「<span class="hl">承知いたしました</span>。14時に伺います。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">謝罪</span>
+      <span class="phrase-ok">申し訳ございません</span>
+      <span class="phrase-ng">すみません</span>
+    </div>
+    <div class="phrase-example">遅刻しそうな時の電話→「<span class="hl">申し訳ございません</span>、到着が5分ほど遅れる見込みです。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">感謝</span>
+      <span class="phrase-ok">誠にありがとうございます</span>
+    </div>
+    <div class="phrase-example">OB訪問の終わり→「本日は貴重なお時間をいただき、<span class="hl">誠にありがとうございました</span>。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">依頼</span>
+      <span class="phrase-ok">〜していただけますでしょうか</span>
+      <span class="phrase-ng">〜してください</span>
+    </div>
+    <div class="phrase-example">資料を求める時→「こちらの資料を<span class="hl">お送りいただけますでしょうか</span>。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">労い</span>
+      <span class="phrase-ok">お疲れさまでした</span>
+      <span class="phrase-ng">ご苦労さまでした</span>
+    </div>
+    <div class="phrase-example">インターン先の先輩に→「<span class="hl">お疲れさまでした</span>。本日もありがとうございました。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">先に帰る</span>
+      <span class="phrase-ok">お先に失礼いたします</span>
+      <span class="phrase-ng">ご苦労さまでした</span>
+    </div>
+    <div class="phrase-example">インターン帰宅時→「<span class="hl">お先に失礼いたします</span>。本日はありがとうございました。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">知らない</span>
+      <span class="phrase-ok">存じ上げません</span>
+      <span class="phrase-ng">知りません・わかりません</span>
+    </div>
+    <div class="phrase-example">面接で知らない事柄を聞かれた時→「その点については<span class="hl">存じ上げません</span>でした。勉強いたします。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">問題ない</span>
+      <span class="phrase-ok">問題ありません・差し支えありません</span>
+      <span class="phrase-ng">大丈夫です</span>
+    </div>
+    <div class="phrase-example">日程の確認→「その日程で<span class="hl">問題ありません</span>。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">同意</span>
+      <span class="phrase-ok">おっしゃるとおりです</span>
+      <span class="phrase-ng">なるほど・確かに</span>
+    </div>
+    <div class="phrase-example">面接官の意見に同意する→「<span class="hl">おっしゃるとおりです</span>。私もそのように考えております。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">勉強になった</span>
+      <span class="phrase-ok">大変勉強になりました</span>
+      <span class="phrase-ng">参考になりました</span>
+    </div>
+    <div class="phrase-example">OB訪問の感想→「本日のお話、<span class="hl">大変勉強になりました</span>。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">確認</span>
+      <span class="phrase-ok">よろしいでしょうか</span>
+      <span class="phrase-ng">よろしかったでしょうか</span>
+    </div>
+    <div class="phrase-example">日程の確認→「火曜日の13時で<span class="hl">よろしいでしょうか</span>。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">物を渡す</span>
+      <span class="phrase-ok">こちらでございます</span>
+      <span class="phrase-ng">こちらになります</span>
+    </div>
+    <div class="phrase-example">履歴書を渡す→「こちらが履歴書<span class="hl">でございます</span>。どうぞよろしくお願いいたします。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">断れない時</span>
+      <span class="phrase-ok">いたしかねます</span>
+      <span class="phrase-ng">できません</span>
+    </div>
+    <div class="phrase-example">無理な要求を断る→「あいにくその件については<span class="hl">いたしかねます</span>。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">忘れていた</span>
+      <span class="phrase-ok">失念しておりました</span>
+      <span class="phrase-ng">忘れていました</span>
+    </div>
+    <div class="phrase-example">連絡を忘れていた時→「ご連絡が遅くなり<span class="hl">失念しておりました</span>。申し訳ございません。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">予定がある</span>
+      <span class="phrase-ok">予定が入っております</span>
+      <span class="phrase-ng">忙しいです・微妙です</span>
+    </div>
+    <div class="phrase-example">日程調整→「申し訳ございませんが、その日は<span class="hl">予定が入っております</span>。」</div>
+  </div>
+
+</section>
+
+<!-- ======= クッション言葉 ======= -->
+<section id="cushion">
+  <div class="section-head">
+    <span class="section-num">03</span>
+    <h2>クッション言葉</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="subsection">依頼するとき</div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">恐れ入りますが</div>
+    <div class="cushion-scene">最汎用。依頼・確認・聞き直し何にでも使える。</div>
+    <div class="cushion-ex"><span class="hl">恐れ入りますが</span>、もう一度おっしゃっていただけますでしょうか。</div>
+  </div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">お手数ですが</div>
+    <div class="cushion-scene">相手に手間をかける時。</div>
+    <div class="cushion-ex"><span class="hl">お手数ですが</span>、資料をお送りいただけますでしょうか。</div>
+  </div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">よろしければ</div>
+    <div class="cushion-scene">相手に選択肢を与えつつ依頼する時。</div>
+    <div class="cushion-ex"><span class="hl">よろしければ</span>、ご意見をお聞かせいただけますでしょうか。</div>
+  </div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">差し支えなければ</div>
+    <div class="cushion-scene">断られる可能性がある依頼・質問。</div>
+    <div class="cushion-ex"><span class="hl">差し支えなければ</span>、詳しくお聞かせいただけますか。</div>
+  </div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">ご面倒をおかけいたしますが</div>
+    <div class="cushion-scene">明らかに手間をかける依頼をする時。</div>
+    <div class="cushion-ex"><span class="hl">ご面倒をおかけいたしますが</span>、ご確認いただけますでしょうか。</div>
+  </div>
+
+  <div class="subsection">断るとき</div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">あいにく</div>
+    <div class="cushion-scene">都合が悪い時の最初の一言。</div>
+    <div class="cushion-ex"><span class="hl">あいにく</span>その日は予定が入っております。</div>
+  </div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">せっかくですが</div>
+    <div class="cushion-scene">相手の好意を断る時。</div>
+    <div class="cushion-ex"><span class="hl">せっかくですが</span>、今回は辞退させていただきます。</div>
+  </div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">残念ですが</div>
+    <div class="cushion-scene">丁寧に断りたい時。</div>
+    <div class="cushion-ex"><span class="hl">残念ですが</span>、その件はお受けするのが難しい状況でございます。</div>
+  </div>
+
+  <div class="subsection">聞き直すとき・質問するとき</div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">恐れ入りますが、もう一度…</div>
+    <div class="cushion-scene">電話・対面で聞き取れなかった時。</div>
+    <div class="cushion-ex"><span class="hl">恐れ入りますが</span>、もう一度おっしゃっていただけますでしょうか。</div>
+  </div>
+
+  <div class="cushion-card">
+    <div class="cushion-word">少々お聞きしてもよろしいでしょうか</div>
+    <div class="cushion-scene">質問する前の前置き。</div>
+    <div class="cushion-ex"><span class="hl">少々お聞きしてもよろしいでしょうか</span>。御社の〜についてですが……</div>
+  </div>
+
+</section>
+
+<!-- ======= 語彙言い換え ======= -->
+<section id="words">
+  <div class="section-head">
+    <span class="section-num">04</span>
+    <h2>語彙言い換え</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="subsection">時間・タイミング</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-from">今日（きょう）</div>
+      <div class="word-to">本日（ほんじつ）</div>
+      <div class="word-example"><span class="hl">本日</span>はお時間をいただきありがとうございます。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">昨日（きのう）</div>
+      <div class="word-to">昨日（さくじつ）</div>
+      <div class="word-example"><span class="hl">昨日</span>送付いたしましたメールをご確認いただけますでしょうか。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">明日（あした）</div>
+      <div class="word-to">明日（みょうにち）</div>
+      <div class="word-example"><span class="hl">明日</span>改めてご連絡いたします。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">このあいだ</div>
+      <div class="word-to">先日（せんじつ）</div>
+      <div class="word-example"><span class="hl">先日</span>はお世話になりました。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">さっき</div>
+      <div class="word-to">先程（さきほど）</div>
+      <div class="word-example"><span class="hl">先程</span>おっしゃっていた件についてですが……</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">あとで</div>
+      <div class="word-to">後ほど（のちほど）</div>
+      <div class="word-example"><span class="hl">後ほど</span>ご連絡いたします。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">今回</div>
+      <div class="word-to">このたび</div>
+      <div class="word-example"><span class="hl">このたび</span>は貴重な機会をいただきありがとうございます。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">すぐに</div>
+      <div class="word-to">早速・早急に</div>
+      <div class="word-example"><span class="hl">早速</span>確認いたします。</div>
+    </div>
+  </div>
+
+  <div class="subsection">程度・様態</div>
+  <div class="word-grid">
+    <div class="word-card">
+      <div class="word-from">とても・すごく</div>
+      <div class="word-to">大変・非常に・誠に</div>
+      <div class="word-example"><span class="hl">大変</span>勉強になりました。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">ちょっと・少し</div>
+      <div class="word-to">少々（しょうしょう）</div>
+      <div class="word-example"><span class="hl">少々</span>お時間をいただけますでしょうか。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">どうですか</div>
+      <div class="word-to">いかがですか</div>
+      <div class="word-example">ご都合は<span class="hl">いかがでしょうか</span>。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">大丈夫ですか</div>
+      <div class="word-to">よろしいですか・差し支えありませんか</div>
+      <div class="word-example">この日程で<span class="hl">よろしいですか</span>。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">どれくらい</div>
+      <div class="word-to">いかほど</div>
+      <div class="word-example">お時間は<span class="hl">いかほど</span>いただけますでしょうか。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">できません</div>
+      <div class="word-to">いたしかねます</div>
+      <div class="word-example">その件については対応<span class="hl">いたしかねます</span>。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">忘れていました</div>
+      <div class="word-to">失念しておりました</div>
+      <div class="word-example">ご連絡が遅れ、<span class="hl">失念しておりました</span>。</div>
+    </div>
+    <div class="word-card">
+      <div class="word-from">知っています</div>
+      <div class="word-to">存じ上げております</div>
+      <div class="word-example">その件については<span class="hl">存じ上げております</span>。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 名詞・呼称 ======= -->
+<section id="nouns">
+  <div class="section-head">
+    <span class="section-num">05</span>
+    <h2>名詞・呼称</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">会社（対面・電話）</span>
+      <span class="phrase-ok">御社（おんしゃ）</span>
+      <span class="phrase-ng">貴社・そちら</span>
+    </div>
+    <div class="phrase-example">面接→「<span class="hl">御社</span>を志望した理由は……」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">会社（メール・ES）</span>
+      <span class="phrase-ok">貴社（きしゃ）</span>
+      <span class="phrase-ng">御社</span>
+    </div>
+    <div class="phrase-example">ESの冒頭→「<span class="hl">貴社</span>を志望する理由を述べます。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">自分の会社</span>
+      <span class="phrase-ok">弊社（へいしゃ）</span>
+      <span class="phrase-ng">うちの会社・自社</span>
+    </div>
+    <div class="phrase-example">インターン先での会話→「<span class="hl">弊社</span>の製品についてご説明いたします。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">自分の一人称</span>
+      <span class="phrase-ok">わたくし</span>
+      <span class="phrase-ng">僕・自分・俺・わたし</span>
+    </div>
+    <div class="phrase-example">面接の自己紹介→「<span class="hl">わたくし</span>は○○大学の田中と申します。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">役職+名前</span>
+      <span class="phrase-ok">部長の山田様</span>
+      <span class="phrase-ng">山田部長様</span>
+    </div>
+    <div class="phrase-example">電話→「<span class="hl">部長の山田様</span>はいらっしゃいますでしょうか。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">担当者を呼ぶ（電話）</span>
+      <span class="phrase-ok">人事ご担当の方</span>
+      <span class="phrase-ng">人事様</span>
+    </div>
+    <div class="phrase-example">電話→「<span class="hl">人事ご担当の方</span>をお願いできますでしょうか。」</div>
+  </div>
+
+  <div class="phrase-card">
+    <div class="phrase-head">
+      <span class="phrase-label">受付で名乗る</span>
+      <span class="phrase-ok">〇〇と申します</span>
+      <span class="phrase-ng">〇〇です・〇〇になります</span>
+    </div>
+    <div class="phrase-example">「本日は面接のため参りました、○○大学の田中と<span class="hl">申します</span>。」</div>
+  </div>
+
+</section>
+
+</main>
+
+<footer>声に出して読む · 毎日少しずつ · 口が覚えるまで繰り返す</footer>
+
+</body>
+</html>

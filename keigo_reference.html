@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>敬語完全マスター｜ビジネス敬語総合リファレンス</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --paper: #f7f4ee;
+    --red: #c0392b;
+    --gold: #b8860b;
+    --blue: #1a4a7a;
+    --light-gray: #e8e4dc;
+    --mid-gray: #a09898;
+    --accent: #8b1a1a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px 40px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '敬';
+    position: absolute;
+    right: -20px;
+    top: -40px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 280px;
+    color: rgba(255,255,255,0.04);
+    letter-spacing: -10px;
+    line-height: 1;
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; position: relative; }
+  .header-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  .header-sub {
+    font-size: 14px;
+    color: rgba(247,244,238,0.6);
+    letter-spacing: 1px;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+  }
+  nav a {
+    color: rgba(247,244,238,0.6);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 14px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    font-weight: 400;
+  }
+  nav a:hover {
+    color: var(--paper);
+    border-bottom-color: var(--gold);
+  }
+
+  /* MAIN */
+  main { max-width: 900px; margin: 0 auto; padding: 60px 40px; }
+
+  /* SECTION */
+  section { margin-bottom: 72px; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  .section-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 36px;
+    color: var(--light-gray);
+    font-weight: 300;
+    line-height: 1;
+  }
+  h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--ink);
+  }
+
+  /* INTRO CARDS */
+  .kind-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-bottom: 32px;
+  }
+  @media (max-width: 600px) { .kind-grid { grid-template-columns: 1fr; } }
+  .kind-card {
+    background: white;
+    padding: 28px 24px;
+    border-top: 3px solid transparent;
+  }
+  .kind-card.sonkei { border-top-color: var(--red); }
+  .kind-card.kenjou { border-top-color: var(--blue); }
+  .kind-card.teinei { border-top-color: var(--gold); }
+  .kind-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .kind-card.sonkei .kind-title { color: var(--red); }
+  .kind-card.kenjou .kind-title { color: var(--blue); }
+  .kind-card.teinei .kind-title { color: var(--gold); }
+  .kind-def { font-size: 13px; color: var(--mid-gray); margin-bottom: 12px; }
+  .kind-example { font-size: 13px; line-height: 1.9; }
+  .kind-example span { font-weight: 500; color: var(--ink); }
+
+  /* TABLE */
+  .table-wrap { overflow-x: auto; margin-bottom: 16px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    min-width: 560px;
+  }
+  thead th {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 12px;
+    text-align: left;
+  }
+  thead th:first-child { width: 14%; }
+  tbody tr:nth-child(even) { background: rgba(255,255,255,0.6); }
+  tbody tr:nth-child(odd) { background: white; }
+  tbody td {
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--light-gray);
+    vertical-align: middle;
+  }
+  td:first-child {
+    font-weight: 700;
+    font-family: 'Noto Serif JP', serif;
+    color: var(--ink);
+    font-size: 15px;
+  }
+  .sonkei-cell { color: var(--red); }
+  .kenjou-cell { color: var(--blue); }
+  .note { font-size: 12px; color: var(--mid-gray); margin-top: 8px; }
+
+  /* NG TABLE */
+  .ng-table thead th:nth-child(1) { width: 30%; }
+  .ng-tag {
+    display: inline-block;
+    background: #fde8e8;
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-right: 6px;
+    letter-spacing: 0.5px;
+  }
+  .ok-tag {
+    display: inline-block;
+    background: #e8f5e8;
+    color: #2d7a2d;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-right: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  /* CONTEXT TABLE */
+  .context-table { min-width: 480px; }
+  .context-table td:nth-child(2), 
+  .context-table td:nth-child(3) { font-size: 13px; }
+
+  /* CUSHION */
+  .cushion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  @media (max-width: 600px) { .cushion-grid { grid-template-columns: 1fr; } }
+  .cushion-group {
+    background: white;
+    padding: 24px;
+  }
+  .cushion-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--mid-gray);
+    margin-bottom: 14px;
+  }
+  .cushion-item {
+    font-size: 13.5px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+  }
+  .cushion-item:last-child { border-bottom: none; }
+  .cushion-use { font-size: 11px; color: var(--mid-gray); }
+
+  /* WORD REPLACE */
+  .word-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  @media (max-width: 600px) { .word-grid { grid-template-columns: 1fr; } }
+
+  /* NOUN TABLE */
+  .noun-section { margin-bottom: 24px; }
+  .noun-section h3 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--mid-gray);
+    margin-bottom: 12px;
+  }
+
+  /* ALERT BOX */
+  .alert-box {
+    border-left: 3px solid var(--red);
+    background: white;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .alert-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--red);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .alert-body { font-size: 13.5px; line-height: 1.9; }
+  .alert-example { margin-top: 10px; font-size: 13px; }
+  .alert-example .ng { color: var(--red); }
+  .alert-example .ok { color: #2d7a2d; }
+  .alert-example .line { margin-bottom: 4px; }
+
+  /* QUICK REFS */
+  .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+  @media (max-width: 600px) { .quick-grid { grid-template-columns: 1fr; } }
+  .quick-card {
+    background: white;
+    padding: 20px 22px;
+  }
+  .quick-q { font-size: 12px; color: var(--mid-gray); margin-bottom: 8px; letter-spacing: 0.5px; }
+  .quick-ng { font-size: 13px; text-decoration: line-through; color: var(--red); margin-bottom: 4px; }
+  .quick-ok { font-size: 15px; font-weight: 700; color: var(--blue); font-family: 'Noto Serif JP', serif; }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(247,244,238,0.4);
+    text-align: center;
+    padding: 32px 40px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* SCROLL */
+  html { scroll-behavior: smooth; }
+  
+  /* DIVIDER */
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 0 20px;
+  }
+
+  /* SUBTITLE */
+  .subsection-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 32px 0 16px;
+    letter-spacing: 1px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .subsection-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--light-gray);
+  }
+
+  /* HIGHLIGHT */
+  .highlight-row td:first-child { color: var(--accent) !important; }
+
+  /* SPECIAL LABEL */
+  .cat-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    border-radius: 0;
+    vertical-align: middle;
+  }
+  .cat-sonkei { background: #fde8e8; color: var(--red); }
+  .cat-kenjou { background: #e8eef5; color: var(--blue); }
+  .cat-teinei { background: #faf6e8; color: var(--gold); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-label">ビジネス敬語 完全リファレンス</div>
+    <h1>正しい敬語を<br>使いこなす</h1>
+    <p class="header-sub">対面・電話・メール・全般 ── あらゆる場面に対応した敬語の総合辞典</p>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#basics">基本分類</a>
+    <a href="#verbs">動詞一覧</a>
+    <a href="#nouns">名詞・呼称</a>
+    <a href="#phrases">定型フレーズ</a>
+    <a href="#cushion">クッション言葉</a>
+    <a href="#words">語彙言い換え</a>
+    <a href="#ng">NG表現</a>
+    <a href="#nijuu">二重敬語</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 1. 基本分類 -->
+  <section id="basics">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>敬語の基本分類</h2>
+    </div>
+    <div class="kind-grid">
+      <div class="kind-card sonkei">
+        <div class="kind-title">尊敬語</div>
+        <div class="kind-def">相手の行動・状態を高めて表現。主語が相手（目上の人）のときに使う。</div>
+        <div class="kind-example">
+          「言う」→ <span>おっしゃる</span><br>
+          「行く」→ <span>いらっしゃる</span><br>
+          「見る」→ <span>ご覧になる</span><br>
+          「する」→ <span>なさる</span>
+        </div>
+      </div>
+      <div class="kind-card kenjou">
+        <div class="kind-title">謙譲語</div>
+        <div class="kind-def">自分の行動をへりくだって表現。主語が自分（または身内）のときに使う。</div>
+        <div class="kind-example">
+          「言う」→ <span>申し上げる</span><br>
+          「行く」→ <span>伺う・参る</span><br>
+          「見る」→ <span>拝見する</span><br>
+          「する」→ <span>いたす</span>
+        </div>
+      </div>
+      <div class="kind-card teinei">
+        <div class="kind-title">丁寧語</div>
+        <div class="kind-def">「です」「ます」「ございます」を使って丁寧に表現する。美化語（お・ご）も含む。</div>
+        <div class="kind-example">
+          「言う」→ <span>言います</span><br>
+          「行く」→ <span>行きます</span><br>
+          「見る」→ <span>見ます</span><br>
+          名前 → <span>お名前</span>
+        </div>
+      </div>
+    </div>
+    <p class="note">※ 文化審議会答申「敬語の指針」(2007年) では5分類（謙譲語Ⅰ・Ⅱ、丁寧語・美化語）とされているが、本リファレンスでは実用的な3分類で整理する。</p>
+  </section>
+
+  <!-- 2. 動詞一覧 -->
+  <section id="verbs">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>動詞の敬語対応表</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>普通語</th>
+            <th class="sonkei-cell">尊敬語（相手の動作）</th>
+            <th class="kenjou-cell">謙譲語（自分の動作）</th>
+            <th>丁寧語</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>言う</td>
+            <td class="sonkei-cell">おっしゃる・言われる</td>
+            <td class="kenjou-cell">申す・申し上げる</td>
+            <td>言います</td>
+          </tr>
+          <tr>
+            <td>聞く</td>
+            <td class="sonkei-cell">お聞きになる・聞かれる</td>
+            <td class="kenjou-cell">伺う・拝聴する・お聞きする・承る</td>
+            <td>聞きます</td>
+          </tr>
+          <tr>
+            <td>見る</td>
+            <td class="sonkei-cell">ご覧になる・見られる</td>
+            <td class="kenjou-cell">拝見する</td>
+            <td>見ます</td>
+          </tr>
+          <tr>
+            <td>見せる</td>
+            <td class="sonkei-cell">お見せになる・見せられる</td>
+            <td class="kenjou-cell">お目にかける・ご覧に入れる・お見せする</td>
+            <td>見せます</td>
+          </tr>
+          <tr>
+            <td>話す</td>
+            <td class="sonkei-cell">お話しになる</td>
+            <td class="kenjou-cell">申し上げる・お話しする</td>
+            <td>話します</td>
+          </tr>
+          <tr>
+            <td>行く</td>
+            <td class="sonkei-cell">いらっしゃる・おいでになる</td>
+            <td class="kenjou-cell">伺う・参る</td>
+            <td>行きます</td>
+          </tr>
+          <tr>
+            <td>来る</td>
+            <td class="sonkei-cell">いらっしゃる・お越しになる・おいでになる・見える・お見えになる</td>
+            <td class="kenjou-cell">伺う・参る</td>
+            <td>来ます</td>
+          </tr>
+          <tr>
+            <td>帰る</td>
+            <td class="sonkei-cell">お帰りになる・帰られる</td>
+            <td class="kenjou-cell">おいとまする・失礼する</td>
+            <td>帰ります</td>
+          </tr>
+          <tr>
+            <td>いる</td>
+            <td class="sonkei-cell">いらっしゃる・おいでになる</td>
+            <td class="kenjou-cell">おる</td>
+            <td>います</td>
+          </tr>
+          <tr>
+            <td>ある</td>
+            <td class="sonkei-cell">おありになる</td>
+            <td class="kenjou-cell">—</td>
+            <td>あります・ございます</td>
+          </tr>
+          <tr>
+            <td>する</td>
+            <td class="sonkei-cell">なさる・される</td>
+            <td class="kenjou-cell">いたす・させていただく</td>
+            <td>します</td>
+          </tr>
+          <tr>
+            <td>知る</td>
+            <td class="sonkei-cell">ご存じ・お知りになる・知られる</td>
+            <td class="kenjou-cell">存じる・存じ上げる・承知する</td>
+            <td>知っています</td>
+          </tr>
+          <tr>
+            <td>読む</td>
+            <td class="sonkei-cell">お読みになる・読まれる</td>
+            <td class="kenjou-cell">拝読する</td>
+            <td>読みます</td>
+          </tr>
+          <tr>
+            <td>食べる・飲む</td>
+            <td class="sonkei-cell">召し上がる・おあがりになる</td>
+            <td class="kenjou-cell">いただく・頂戴する</td>
+            <td>食べます・飲みます</td>
+          </tr>
+          <tr>
+            <td>もらう</td>
+            <td class="sonkei-cell">お受け取りになる・お納めになる・もらわれる</td>
+            <td class="kenjou-cell">いただく・頂戴する・拝受する・賜る</td>
+            <td>もらいます</td>
+          </tr>
+          <tr>
+            <td>会う</td>
+            <td class="sonkei-cell">お会いになる・会われる</td>
+            <td class="kenjou-cell">お目にかかる・お会いする</td>
+            <td>会います</td>
+          </tr>
+          <tr>
+            <td>待つ</td>
+            <td class="sonkei-cell">お待ちになる・お待ちくださる</td>
+            <td class="kenjou-cell">お待ちする</td>
+            <td>待ちます</td>
+          </tr>
+          <tr>
+            <td>思う</td>
+            <td class="sonkei-cell">お思いになる・思し召す・おぼし召す</td>
+            <td class="kenjou-cell">存じる・拝察する</td>
+            <td>思います</td>
+          </tr>
+          <tr>
+            <td>考える</td>
+            <td class="sonkei-cell">お考えになる・考えられる・ご高察なさる</td>
+            <td class="kenjou-cell">拝察する・検討いたします</td>
+            <td>考えます</td>
+          </tr>
+          <tr>
+            <td>訪問する</td>
+            <td class="sonkei-cell">訪問される・訪問なさる・訪ねられる</td>
+            <td class="kenjou-cell">伺う・お訪ねする・ご訪問する</td>
+            <td>訪問します</td>
+          </tr>
+          <tr>
+            <td>伝える</td>
+            <td class="sonkei-cell">お伝えになる</td>
+            <td class="kenjou-cell">申し伝える</td>
+            <td>伝えます</td>
+          </tr>
+          <tr>
+            <td>与える</td>
+            <td class="sonkei-cell">くださる・お与えになる</td>
+            <td class="kenjou-cell">差し上げる</td>
+            <td>あげます</td>
+          </tr>
+          <tr>
+            <td>受け取る</td>
+            <td class="sonkei-cell">お受け取りになる</td>
+            <td class="kenjou-cell">賜る・頂戴する・拝受する</td>
+            <td>受け取ります</td>
+          </tr>
+          <tr>
+            <td>座る</td>
+            <td class="sonkei-cell">お掛けになる</td>
+            <td class="kenjou-cell">お座りする・座らせていただく</td>
+            <td>座ります</td>
+          </tr>
+          <tr>
+            <td>使う</td>
+            <td class="sonkei-cell">お使いになる</td>
+            <td class="kenjou-cell">使わせていただく</td>
+            <td>使います</td>
+          </tr>
+          <tr>
+            <td>わかる</td>
+            <td class="sonkei-cell">おわかりになる・ご理解いただく</td>
+            <td class="kenjou-cell">かしこまる・承知する</td>
+            <td>わかります</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">※「おいでになる」は行く・来る・いるの3つの尊敬語として使える。「伺う」も行く・来る・聞くの謙譲語として使える。</p>
+    <p class="note">※ 社外では、上司など身内の動作も謙譲語で表す（例：「部長が申しておりました」）。</p>
+  </section>
+
+  <!-- 3. 名詞・呼称 -->
+  <section id="nouns">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>名詞・呼称の敬語対応表</h2>
+    </div>
+
+    <div class="subsection-title">人称・一般名詞</div>
+    <div class="table-wrap">
+      <table class="context-table">
+        <thead>
+          <tr>
+            <th>普通語</th>
+            <th class="sonkei-cell">尊敬語（相手側）</th>
+            <th class="kenjou-cell">謙譲語（自分側）</th>
+            <th>丁寧語</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>私</td>
+            <td class="sonkei-cell">—</td>
+            <td class="kenjou-cell">わたくし</td>
+            <td>わたし</td>
+          </tr>
+          <tr>
+            <td>名前</td>
+            <td class="sonkei-cell">お名前</td>
+            <td class="kenjou-cell">（自分の名前はそのまま）</td>
+            <td>名前</td>
+          </tr>
+          <tr>
+            <td>人</td>
+            <td class="sonkei-cell">方（かた）</td>
+            <td class="kenjou-cell">者（もの）</td>
+            <td>人</td>
+          </tr>
+          <tr>
+            <td>話</td>
+            <td class="sonkei-cell">お話</td>
+            <td class="kenjou-cell">ご報告・ご説明</td>
+            <td>話</td>
+          </tr>
+          <tr>
+            <td>意見</td>
+            <td class="sonkei-cell">ご意見</td>
+            <td class="kenjou-cell">私見・拙見・僭越ながら</td>
+            <td>意見</td>
+          </tr>
+          <tr>
+            <td>考え</td>
+            <td class="sonkei-cell">お考え</td>
+            <td class="kenjou-cell">私の考え</td>
+            <td>考え</td>
+          </tr>
+          <tr>
+            <td>これ</td>
+            <td class="sonkei-cell">こちら</td>
+            <td class="kenjou-cell">こちら</td>
+            <td>こちら</td>
+          </tr>
+          <tr>
+            <td>あれ</td>
+            <td class="sonkei-cell">あちら</td>
+            <td class="kenjou-cell">あちら</td>
+            <td>あちら</td>
+          </tr>
+          <tr>
+            <td>返事</td>
+            <td class="sonkei-cell">お返事</td>
+            <td class="kenjou-cell">ご返事</td>
+            <td>返事</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection-title">組織・機関名称</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>普通語</th>
+            <th class="sonkei-cell">尊敬語（相手の組織）</th>
+            <th class="kenjou-cell">謙譲語（自分の組織）</th>
+            <th>備考</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>会社</td>
+            <td class="sonkei-cell">御社（話し言葉）・貴社（書き言葉）</td>
+            <td class="kenjou-cell">弊社</td>
+            <td>面接・電話→御社　ES・メール→貴社</td>
+          </tr>
+          <tr>
+            <td>お店</td>
+            <td class="sonkei-cell">貴店（きてん）</td>
+            <td class="kenjou-cell">弊店（へいてん）</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>銀行</td>
+            <td class="sonkei-cell">貴行（きこう）</td>
+            <td class="kenjou-cell">弊行（へいこう）</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>学校</td>
+            <td class="sonkei-cell">貴校（きこう）</td>
+            <td class="kenjou-cell">弊校（へいこう）</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>新聞</td>
+            <td class="sonkei-cell">貴紙（きし）</td>
+            <td class="kenjou-cell">弊紙・小紙（しょうし）</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>雑誌</td>
+            <td class="sonkei-cell">貴誌（きし）</td>
+            <td class="kenjou-cell">弊誌・小誌（しょうし）</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection-title">役職・個人名の呼び方</div>
+    <div class="table-wrap">
+      <table class="ng-table">
+        <thead>
+          <tr>
+            <th>シーン</th>
+            <th>正しい表現</th>
+            <th>NG例と理由</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>相手の役職+名前</td>
+            <td>部長の山田様</td>
+            <td><span class="ng-tag">NG</span>山田部長様（役職は敬称を含むため「様」は不要）</td>
+          </tr>
+          <tr>
+            <td>相手を個人名で呼ぶ</td>
+            <td>山田様</td>
+            <td><span class="ng-tag">NG</span>山田さん（よりフォーマルには「様」）</td>
+          </tr>
+          <tr>
+            <td>電話で担当者を呼ぶ</td>
+            <td>人事ご担当の方はいらっしゃいますか</td>
+            <td><span class="ng-tag">NG</span>人事様はいらっしゃいますか（部署名に「様」は不可）</td>
+          </tr>
+          <tr>
+            <td>自分の所属を伝える</td>
+            <td>○○大学の○○と申します</td>
+            <td><span class="ng-tag">NG</span>○○大学の○○になります（「なります」は変化を示す語）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 4. 定型フレーズ -->
+  <section id="phrases">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>場面別・定型フレーズ集</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table class="ng-table">
+        <thead>
+          <tr>
+            <th>場面</th>
+            <th>正しい敬語（ビジネス適切）</th>
+            <th>避けるべき表現</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>承諾・了解</td>
+            <td><span class="ok-tag">OK</span>承知いたしました・かしこまりました</td>
+            <td><span class="ng-tag">NG</span>了解しました・わかりました（目上には不適切）</td>
+          </tr>
+          <tr>
+            <td>謝罪</td>
+            <td><span class="ok-tag">OK</span>申し訳ございません・大変失礼いたしました</td>
+            <td><span class="ng-tag">NG</span>すみません・ごめんなさい</td>
+          </tr>
+          <tr>
+            <td>感謝</td>
+            <td><span class="ok-tag">OK</span>誠にありがとうございます・感謝申し上げます</td>
+            <td><span class="ng-tag">NG</span>どうもです・ありがとうございます（よりフォーマルに）</td>
+          </tr>
+          <tr>
+            <td>依頼</td>
+            <td><span class="ok-tag">OK</span>○○していただけますでしょうか・お願いいたします</td>
+            <td><span class="ng-tag">NG</span>○○してください・○○してくれますか</td>
+          </tr>
+          <tr>
+            <td>労い</td>
+            <td><span class="ok-tag">OK</span>お疲れさまでした</td>
+            <td><span class="ng-tag">NG</span>ご苦労さまでした（目上の人が目下に使う表現）</td>
+          </tr>
+          <tr>
+            <td>先に帰るとき</td>
+            <td><span class="ok-tag">OK</span>お先に失礼いたします</td>
+            <td><span class="ng-tag">NG</span>ご苦労様でした（相手への労いには使わない）</td>
+          </tr>
+          <tr>
+            <td>不明・知らない</td>
+            <td><span class="ok-tag">OK</span>存じ上げません・少々お調べいたします</td>
+            <td><span class="ng-tag">NG</span>わかりません・知りません</td>
+          </tr>
+          <tr>
+            <td>問題ない</td>
+            <td><span class="ok-tag">OK</span>問題ありません・差し支えありません</td>
+            <td><span class="ng-tag">NG</span>大丈夫です（曖昧で意味が伝わりにくい）</td>
+          </tr>
+          <tr>
+            <td>同意</td>
+            <td><span class="ok-tag">OK</span>おっしゃるとおりです・はい、さようでございます</td>
+            <td><span class="ng-tag">NG</span>なるほど・確かに（相手を評価する意味合いを含む）</td>
+          </tr>
+          <tr>
+            <td>参考になった</td>
+            <td><span class="ok-tag">OK</span>大変勉強になりました</td>
+            <td><span class="ng-tag">NG</span>参考になりました（目上の人へは失礼）</td>
+          </tr>
+          <tr>
+            <td>確認・質問</td>
+            <td><span class="ok-tag">OK</span>よろしいでしょうか・いかがでしょうか</td>
+            <td><span class="ng-tag">NG</span>よろしかったでしょうか（現在のことを過去形で聞くのは誤り）</td>
+          </tr>
+          <tr>
+            <td>物を渡すとき</td>
+            <td><span class="ok-tag">OK</span>こちらが○○でございます</td>
+            <td><span class="ng-tag">NG</span>○○になります（変化しないものに「なります」は不自然）</td>
+          </tr>
+          <tr>
+            <td>不能・断り</td>
+            <td><span class="ok-tag">OK</span>いたしかねます・あいにくでございますが</td>
+            <td><span class="ng-tag">NG</span>できません</td>
+          </tr>
+          <tr>
+            <td>忘れていた</td>
+            <td><span class="ok-tag">OK</span>失念しておりました</td>
+            <td><span class="ng-tag">NG</span>忘れていました</td>
+          </tr>
+          <tr>
+            <td>予定が入っている</td>
+            <td><span class="ok-tag">OK</span>申し訳ございませんが、その日は予定が入っております</td>
+            <td><span class="ng-tag">NG</span>その日は忙しいです・微妙です</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 5. クッション言葉 -->
+  <section id="cushion">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>クッション言葉一覧</h2>
+    </div>
+    <p style="font-size:13.5px; margin-bottom: 24px; color: var(--mid-gray);">依頼・断り・確認など、直接的な表現を柔らかく丁寧に伝えるための前置き表現。特に電話・面接・メールで有効。</p>
+    <div class="cushion-grid">
+      <div class="cushion-group">
+        <div class="cushion-label">依頼するとき</div>
+        <div class="cushion-item"><span>恐れ入りますが</span><span class="cushion-use">最汎用</span></div>
+        <div class="cushion-item"><span>恐縮ですが</span><span class="cushion-use">丁寧な依頼</span></div>
+        <div class="cushion-item"><span>よろしければ</span><span class="cushion-use">柔らかく提案</span></div>
+        <div class="cushion-item"><span>差し支えなければ</span><span class="cushion-use">選択肢あり</span></div>
+        <div class="cushion-item"><span>ご面倒をおかけいたしますが</span><span class="cushion-use">手間をかける時</span></div>
+        <div class="cushion-item"><span>申し訳ございませんが</span><span class="cushion-use">負担をかける時</span></div>
+        <div class="cushion-item"><span>お手数ですが</span><span class="cushion-use">相手の手間への配慮</span></div>
+        <div class="cushion-item"><span>ご迷惑をおかけいたしますが</span><span class="cushion-use">迷惑かもの時</span></div>
+      </div>
+      <div class="cushion-group">
+        <div class="cushion-label">断るとき・謝罪するとき</div>
+        <div class="cushion-item"><span>あいにく</span><span class="cushion-use">都合が悪い時</span></div>
+        <div class="cushion-item"><span>残念ですが</span><span class="cushion-use">丁寧な断り</span></div>
+        <div class="cushion-item"><span>せっかくですが</span><span class="cushion-use">好意への断り</span></div>
+        <div class="cushion-item"><span>恐縮ですが</span><span class="cushion-use">謝罪・断り両用</span></div>
+        <div class="cushion-item"><span>誠に申し訳ございませんが</span><span class="cushion-use">重い謝罪に添える</span></div>
+        <div class="cushion-label" style="margin-top:20px;">聞き直すとき</div>
+        <div class="cushion-item"><span>恐れ入りますが、もう一度…</span><span class="cushion-use">電話・対面</span></div>
+        <div class="cushion-item"><span>少々お聞きしてもよろしいでしょうか</span><span class="cushion-use">質問の前に</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 語彙言い換え -->
+  <section id="words">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>ビジネス語彙の言い換え</h2>
+    </div>
+    <p style="font-size:13.5px; margin-bottom: 24px; color: var(--mid-gray);">単語ひとつの言い換えでも印象が大きく変わる。まずはここから習慣づけよう。</p>
+
+    <div class="subsection-title">時間・タイミング表現</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:35%">日常語</th>
+            <th>ビジネス適切な言い方</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>今日（きょう）</td><td>本日（ほんじつ）</td></tr>
+          <tr><td>昨日（きのう）</td><td>昨日（さくじつ）</td></tr>
+          <tr><td>明日（あした）</td><td>明日（みょうにち）・翌日</td></tr>
+          <tr><td>このあいだ</td><td>先日</td></tr>
+          <tr><td>さっき</td><td>先程（さきほど）</td></tr>
+          <tr><td>あとで</td><td>後ほど（のちほど）</td></tr>
+          <tr><td>今回</td><td>このたび</td></tr>
+          <tr><td>すぐに</td><td>早速・早急に</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection-title">程度・様態表現</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:35%">日常語</th>
+            <th>ビジネス適切な言い方</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>とても・すごく</td><td>大変・非常に・誠に</td></tr>
+          <tr><td>ちょっと・少し</td><td>少々・いくらか</td></tr>
+          <tr><td>どれくらい</td><td>いかほど</td></tr>
+          <tr><td>どうですか</td><td>いかがですか</td></tr>
+          <tr><td>大丈夫ですか</td><td>よろしいですか・差し支えありませんか</td></tr>
+          <tr><td>みたいな・そんな感じ</td><td>〜のような・〜と考えました</td></tr>
+          <tr><td>微妙</td><td>難しい状況でございます・調整が必要です</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection-title">場面・状況表現</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:35%">日常語</th>
+            <th>ビジネス適切な言い方</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>知っています</td><td>存じ上げております</td></tr>
+          <tr><td>忘れていました</td><td>失念しておりました</td></tr>
+          <tr><td>できません</td><td>いたしかねます</td></tr>
+          <tr><td>わかりました</td><td>承知いたしました・かしこまりました</td></tr>
+          <tr><td>聞きました</td><td>拝聴いたしました・伺いました</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 7. NG表現まとめ -->
+  <section id="ng">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>よくあるNG表現と正しい言い方</h2>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-title">「なるほど」「確かに」</div>
+      <div class="alert-body">相手の言葉を自分が評価・判定しているニュアンスを含む。目上の人への返答として不適切。</div>
+      <div class="alert-example">
+        <div class="line ng">✗ なるほどですね。確かにそうですね。</div>
+        <div class="line ok">✓ おっしゃるとおりです。はい、さようでございます。</div>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-title">「参考になりました」</div>
+      <div class="alert-body">相手の言葉を自分の知識の「補足材料」と扱う表現。目上の人に対して謙譲の気持ちが足りない。</div>
+      <div class="alert-example">
+        <div class="line ng">✗ 大変参考になりました。</div>
+        <div class="line ok">✓ 大変勉強になりました。</div>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-title">「よろしかったでしょうか」</div>
+      <div class="alert-body">現在の確認事項を過去形で表す誤り。日本語として不自然。</div>
+      <div class="alert-example">
+        <div class="line ng">✗ 次回選考日は○月○日でよろしかったでしょうか？</div>
+        <div class="line ok">✓ 次回選考日は○月○日でよろしいでしょうか？</div>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-title">「〜になります」の誤用</div>
+      <div class="alert-body">「〜になります」は状態の変化・移行を表す。変化しない物や場所に使うのは誤り。</div>
+      <div class="alert-example">
+        <div class="line ng">✗ 履歴書になります。</div>
+        <div class="line ok">✓ 履歴書でございます。</div>
+        <div class="line ng">✗ 自宅の最寄り駅は○○になります。</div>
+        <div class="line ok">✓ 自宅の最寄り駅は○○です。</div>
+        <div class="note" style="margin-top:6px;">※「子どもは今年3歳になります」「就職して5年になります」など、変化・経過を表す場合は正しい。</div>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-title">「させていただく」の多用・誤用</div>
+      <div class="alert-body">「させていただく」は相手の許可を得て自分が行動し、そのことで恩恵を受ける場合に限り使う表現。一方的な行動には不適切。また繰り返し使うと回りくどく聞こえる。</div>
+      <div class="alert-example">
+        <div class="line ng">✗ 現在の職場ではチームリーダーをさせていただいております。</div>
+        <div class="line ok">✓ 現在の職場ではチームリーダーをしております。</div>
+        <div class="line ng">✗ 希望させていただきます。（一方的な行動のため不可）</div>
+        <div class="line ok">✓ 参加させていただきます。（相手の許可が伴う場合は可）</div>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-title">「ご苦労さまです」の誤用</div>
+      <div class="alert-body">「ご苦労さま」は目上の人が目下の人に使う労いの言葉。自分が目下の立場でこの言葉を使うのは失礼にあたる。</div>
+      <div class="alert-example">
+        <div class="line ng">✗ （上司に対して）ご苦労さまでした。</div>
+        <div class="line ok">✓ お疲れさまでした。</div>
+        <div class="line ok">✓ 本日はお時間をいただきありがとうございました。</div>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <div class="alert-title">尊敬語・謙譲語の混同</div>
+      <div class="alert-body">主語が「相手」なら尊敬語、「自分」なら謙譲語。これを混同すると逆の意味になる。</div>
+      <div class="alert-example">
+        <div class="line ng">✗ ○○様はおられますか？（「おる」は謙譲語）</div>
+        <div class="line ok">✓ ○○様はいらっしゃいますか？</div>
+        <div class="line ng">✗ 社長にお聞きになります。（自分の動作に尊敬語は不可）</div>
+        <div class="line ok">✓ 社長に伺います。</div>
+        <div class="line ng">✗ ご拝受いただければ幸いです。（「拝受」は謙譲語で相手に使えない）</div>
+        <div class="line ok">✓ ご覧いただければ幸いです。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 二重敬語 -->
+  <section id="nijuu">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>二重敬語一覧と正しい表現</h2>
+    </div>
+    <p style="font-size:13.5px; margin-bottom: 24px; color: var(--mid-gray);">丁寧にしようとするあまり敬語を重ねてしまう「二重敬語」は、かえって不自然な印象を与える。よくあるパターンを確認しよう。</p>
+
+    <div class="table-wrap">
+      <table class="ng-table">
+        <thead>
+          <tr>
+            <th>誤った表現（二重敬語）</th>
+            <th>正しい表現</th>
+            <th>理由</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ng-tag">NG</span>おっしゃられる</td>
+            <td><span class="ok-tag">OK</span>おっしゃる</td>
+            <td>「おっしゃる」＋「られる」で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>お帰りになられました</td>
+            <td><span class="ok-tag">OK</span>お帰りになりました</td>
+            <td>「お〜になる」＋「られる」で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>お越しになられますか</td>
+            <td><span class="ok-tag">OK</span>お越しになりますか</td>
+            <td>「お〜になる」＋「られる」で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>ご覧になられる</td>
+            <td><span class="ok-tag">OK</span>ご覧になる</td>
+            <td>「ご覧になる」＋「られる」で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>お休みになられる</td>
+            <td><span class="ok-tag">OK</span>お休みになる</td>
+            <td>「お〜になる」＋「られる」で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>拝見させていただきます</td>
+            <td><span class="ok-tag">OK</span>拝見します</td>
+            <td>「拝見」（謙譲語）＋「させていただく」（謙譲語）で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>伺わせていただきます</td>
+            <td><span class="ok-tag">OK</span>伺います</td>
+            <td>「伺う」（謙譲語）＋「させていただく」（謙譲語）で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>お伺いさせていただきます</td>
+            <td><span class="ok-tag">OK</span>伺います</td>
+            <td>「お」＋「伺う」＋「させていただく」で三重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>参らせていただきます</td>
+            <td><span class="ok-tag">OK</span>参ります</td>
+            <td>「参る」（謙譲語）＋「させていただく」（謙譲語）で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>頂かせていただきます</td>
+            <td><span class="ok-tag">OK</span>頂きます</td>
+            <td>「頂く」（謙譲語）＋「させていただく」（謙譲語）で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>拝見いたしました</td>
+            <td><span class="ok-tag">OK</span>拝見しました</td>
+            <td>「拝見」（謙譲語）＋「いたす」（謙譲語）で二重</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>ご質問させてください</td>
+            <td><span class="ok-tag">OK</span>質問をさせてください</td>
+            <td>「ご」は相手への敬語のため自分の行動には使わない</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>○○部長様</td>
+            <td><span class="ok-tag">OK</span>部長の○○様・○○部長</td>
+            <td>役職には敬称が含まれるため「様」は不要</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>社長様</td>
+            <td><span class="ok-tag">OK</span>社長・○○社長・社長の○○様</td>
+            <td>役職自体が敬称を含む</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection-title">「さ入れ言葉」にも注意</div>
+    <div class="table-wrap">
+      <table class="ng-table">
+        <thead>
+          <tr>
+            <th>誤った表現</th>
+            <th>正しい表現</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ng-tag">NG</span>行かさせていただきます</td>
+            <td><span class="ok-tag">OK</span>参ります・伺います</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>話させていただきます（冗長）</td>
+            <td><span class="ok-tag">OK</span>申し上げます</td>
+          </tr>
+          <tr>
+            <td><span class="ng-tag">NG</span>送らさせていただきます</td>
+            <td><span class="ok-tag">OK</span>お送りいたします</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- QUICK REFS -->
+    <div class="subsection-title" style="margin-top: 40px;">最終チェック：5秒で確認</div>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="quick-q">相手の会社を指す（対面・電話）</div>
+        <div class="quick-ng">貴社（書き言葉用）</div>
+        <div class="quick-ok">御社（おんしゃ）</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">相手の会社を指す（メール・書類）</div>
+        <div class="quick-ng">御社（話し言葉用）</div>
+        <div class="quick-ok">貴社（きしゃ）</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">承諾・了解の返事</div>
+        <div class="quick-ng">了解しました</div>
+        <div class="quick-ok">承知いたしました</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">自分の一人称</div>
+        <div class="quick-ng">僕・自分・俺</div>
+        <div class="quick-ok">わたくし</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">謝罪するとき</div>
+        <div class="quick-ng">すみません・ごめんなさい</div>
+        <div class="quick-ok">申し訳ございません</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">労いの言葉（上司に）</div>
+        <div class="quick-ng">ご苦労さまでした</div>
+        <div class="quick-ok">お疲れさまでした</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">相手の話を聞いた後の返し</div>
+        <div class="quick-ng">なるほど・参考になりました</div>
+        <div class="quick-ok">おっしゃるとおりです／勉強になりました</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">受付で名乗るとき</div>
+        <div class="quick-ng">○○です・○○といいます</div>
+        <div class="quick-ok">○○と申します</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>本サイトは複数のビジネスマナー参考サイトを統合・再編集した敬語リファレンスです</p>
+  <p style="margin-top:8px; font-size: 11px;">キャリタス就活 / マイナビ新卒紹介 / タウンワークマガジン / リクナビ / ホワイトキャリア / ジョブドラフト / Indeed ほか参考</p>
+</footer>
+
+</body>
+</html>
